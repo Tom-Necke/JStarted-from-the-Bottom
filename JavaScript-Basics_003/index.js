@@ -37,3 +37,57 @@ console.log(age < 16 ? "serve butter beer" : "serve beer");
 
 // Check if two given integer values are in the range 50 to 99 (this includes both 50 and 99). Print true if either of them are in the range.
 
+let numOne = 30;
+let numTwo = 70;
+
+if (numOne >= 50 && numOne <= 99 && numTwo >= 50 && numTwo <= 99) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+// Create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+
+let pyStr = "Pyramide";
+
+if (pyStr.startsWith("Py")) {
+    console.log(pyStr);
+} else {
+    console.log(false);
+}
+
+// Calculate the sum of the two given integers. If the two values are same, then return triple their sum. 
+
+if (numOne == numTwo) {
+    console.log(numOne * 3);
+} else {
+    console.log(numOne + numTwo);
+}
+
+// isBigger, check if a given number bigger then 55, write that in function
+// check the following 70, 4, 200, 51, 2.2
+
+function isBigger(num) {
+    console.log(num > 55 ? `${num} is bigger than 55` : `${num} is not bigger than 55`);
+}
+
+isBigger(70);
+isBigger(4);
+isBigger(200);
+isBigger(51);
+isBigger(2.2);
+
+// BONUS CHALLENGE: Make a variable for firstName and age and give each variable values. Create an if/else statement to check whether the person's age is less than 13. If so, print "firstName is a child". If the age is equal to or more than 13 and less than 20, print "firstName is a teenager". If the person's age is equal to or more than 20 and less than 30, then print "firstName is a young adult". If none of these conditions apply, print "firstName is a adult".
+
+let firstName = "Tom";
+let myAge = 27;
+
+if (myAge < 13) {
+    console.log(`${firstName} is a child`);
+} else if (myAge >= 13 && myAge < 20) {
+    console.log(`${firstName} is a teenager`);
+} else if (myAge >= 20 && myAge < 30) {
+    console.log(`${firstName} is a young adult`);
+} else {
+    console.log(`${firstName} is a adult`);
+}
