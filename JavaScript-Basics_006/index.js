@@ -49,10 +49,37 @@ toCamelCase("javascript_is_fun");
 
 const dictionary = (str, arr) => {
     let result = []
-
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i].startsWith(str)) {
+            result[i] = arr[i];
+        }
+    }
     return console.log(result)
 }
 
 dictionary("bu", ["button", "breakfast", "border"]);
 dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"]);
 dictionary("beau", ["pastry", "delicious", "name", "boring"]);
+
+// Create an array filled with your friends' and family's names. Loop over the array and greet each friend. Bonus: Print the indexes of each item in the array. Examples:
+// [Maria, Mike, Paul, Doven] ➞ expected output: "Hello Maria! Hello Mike! Hello Paul! Hello Doven!"
+
+let friends = ["Maria", "Mike", "Paul", "Doven"];
+for (let i = 0; i < friends.length; i++){
+    console.log(`Hello ${friends[i]}!`);
+}
+
+// sumOfNumbers. Create a program that adds up the numbers in an array (of at least 3 numbers).
+
+const sumOfNumbers = (arr) => {
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i];
+    }
+    
+    return console.log(result);
+}
+
+sumOfNumbers([3, 5, 30, 70, 12]);
+sumOfNumbers([1, 2, 3, 4, 5, 6]);
+sumOfNumbers([2, 2, 2, 2]);
