@@ -75,10 +75,67 @@ let asianCities = ["Dubai", "Hong Kong", "Istanbul", "Tokyo", "Shanghai"];
 // ["Cynthia", "Karen", "Jane", "Carrie"] ➞ ["Cynthia", "Karen", "Jane", "Carrie"]
 
 const makeItBigger = (arr) => {
-    let result = 
+    let result = [];
+    for (let i = 0; i < arr.length; i++){
+        result[i] = `${arr[i][0].toUpperCase()}${arr[i].substring(1).toLowerCase()}`;
+    }
+    return console.log(result);
 }
 
 makeItBigger(["matt", "sara", "lara"]);
 makeItBigger(["samuel", "MARIA", "luke", "mary"]);
 makeItBigger(["Cynthia", "Karen", "Jane", "Carrie"]);
 
+// Repeat it. Create a program with two variables: "item" and "times". Create a program that repeats the "item" as many times as specified by "times". The first variable ("item") is the item that needs repeating while the second argument ("times") is the number of times the item is to be repeated. Print the result in an array. Examples:
+// ("example", 3) ➞ ["example", "example", "example"]
+
+const repeatIt = (str, num) => {
+    let item = str;
+    let times = num;
+    let result = [];
+    for (let i = 0; i <= times; i++){
+        result[i] = item;
+    }
+    return console.log(result);
+}
+
+repeatIt("Tom", 3);
+repeatIt("Koji", 6);
+
+// Word Ranking. Create a function that takes a string of words and returns the word with the most characters.
+// wordRank("Check back tomorrow, man!") ➞ "tomorrow"
+// wordRank("Today is Wednesday.") ➞ "Wednesday"
+
+const wordRank = (str) => {
+    let result = "";
+    let strToArr = str.split(" ");
+    for (let i = 0; i < strToArr.length; i++){
+        if (result.length < strToArr[i].length) {
+            result = strToArr[i];
+        }
+    }
+    return console.log(result);
+}
+
+wordRank("Check back tomorrow, man!")
+wordRank("Today is Wednesday.")
+
+// The Greater Numbers. Create a function which accepts two arguments: the first argument being an array of numbers, and the second argument being a number. The function should return the elements of the array which are greater than the second argument.
+// i.e.
+// findGreatest([3, 4, 5], 4) ➞ 5
+// findGreatest([10, 20, 30], 12) ➞ 20, 30
+// findGreatest([0, 10, 3], 4) ➞ 10
+
+const findGreatest = (arr, num) => {
+    let result = "";
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > num) {
+            result += `${arr[i]} `;
+        }
+    } 
+    return console.log(result);
+}
+
+findGreatest([3, 4, 5], 4);
+findGreatest([10, 20, 30], 12)
+findGreatest([0, 10, 3], 4);
