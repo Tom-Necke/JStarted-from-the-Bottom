@@ -137,3 +137,13 @@ const exponentialValues = (num1, num2) => {
 }
 
 exponentialValues(3, 5)
+
+// Create a function named printFavoriteFruit. Declare a variable outside of the function and store your favorite fruit as a value. Reassign the variable within the function and print "My favorite fruit is: x"
+
+let fruit = "Chocolate";
+
+const printFavoriteFruit = () => {
+    return console.log(`My favorite fruit is: ${fruit}`);
+}
+
+printFavoriteFruit()
