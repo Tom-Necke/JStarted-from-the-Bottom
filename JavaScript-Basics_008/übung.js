@@ -17,10 +17,3 @@ console.log(userData);
 
 sum(parseInt(userData[0]), parseInt(userData[1]));
 
-
-// write a function that greet you :)
-
-const greetMe = () {
-    let myData = process.argv
-    return console.log(`Hallo ${myData}`);
-} 
