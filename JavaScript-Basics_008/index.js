@@ -125,13 +125,18 @@ const passwordGenerator = () => {
 }
 passwordGenerator()
 
-
 // Print Exponential Values
 // Write a function that accepts two numbers and validate that they are numbers.
 // After that, the function should print y exponential values starting from x.
 // For example if we have function(3, 5) The function should print 3 9 27 81 243. Prints 5 exponential values of 3.
 // function(2, 8) The function prints 2 4 8 16 32 64 128 256. Prints 8 exponential values of 2.
 
+const exponentialValues = (num1, num2) => {
+    let result = [];
+    for (let i = 0; i <= num2; i++){
+        result[i] = Math.pow(num1, i)
+    }
+    return console.log(result.splice(1));
+}
 
-
-
+exponentialValues(3, 5)
