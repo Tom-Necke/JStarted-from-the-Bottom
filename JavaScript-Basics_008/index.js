@@ -90,7 +90,7 @@ const fahrenheitToCelsius = (fahrenheit) => {
 
 fahrenheitToCelsius(22);
 
-// The Fortune Teller
+// The Fortune Teller.
 // Why pay a fortune teller when you can just program your fortune yourself?
 // Write a function named tellFortune that:
 // takes 4 arguments: number of children, partner's name, geographic location, job title.
