@@ -53,17 +53,15 @@ calculateDogAge(11);
 // ------------------------
 
 
-function calculateSupply(age, amount){
-    let maximalAlter = 100;
-    let restJahre = maximalAlter - age;
-    let tage = restJahre * 365
-    return console.log(`You will need ${tage * amount} to last you until the ripe old age of ${maximalAlter}`);
-}
-
-calculateSupply(10, 3)
-
-
-
+function calculateSupply(age, amount) {
+    let maxAlter = 100;
+    let restJahre = maxAlter - age;
+    let tage = restJahre * 365;
+    return console.log(`You will need ${tage * amount} to last you until the ripe old age of ${maxAlter}.`);
+  }
+  calculateSupply(10, 3)
+  
+  
 // The Temperature Converter
 // It's hot out! Let's make a converter based on the steps here.
 // Create a function called celsiusToFahrenheit:
@@ -130,4 +128,12 @@ passwordGenerator()
 // For example if we have function(3, 5) The function should print 3 9 27 81 243. Prints 5 exponential values of 3.
 // function(2, 8) The function prints 2 4 8 16 32 64 128 256. Prints 8 exponential values of 2.
 
+const exponentialValues = (num1, num2) => {
+    let result = [];
+    for (let i = 0; i <= num2; i++){
+        result[i] = Math.pow(num1, i)
+    }
+    return console.log(result.splice(1));
+}
 
+exponentialValues(3, 5)
