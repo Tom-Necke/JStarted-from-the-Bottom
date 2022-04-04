@@ -31,14 +31,14 @@ greetAll(userData);
 
 // ------------------------
 
-const calculateDogAge = (num) => {
+const calculateDogAge = (num, rate) => {
     let result = "";
-    humanAge = num * 7;
+    humanAge = num * rate;
     result = `Your doggie is ${humanAge} years old in dog years!`
     return console.log(result);
 }
 
-calculateDogAge(11);
+calculateDogAge(11, 7);
 
 // The Lifetime Supply Calculator
 // Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
