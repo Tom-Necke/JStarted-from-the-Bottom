@@ -48,3 +48,17 @@ const vowelCounter = (str) => {
 }
 
 vowelCounter("Hello my name is Tom");
+
+// sumOfNumbers. Create a program that adds up the numbers in an array (of at least 3 numbers).
+
+const sumOfNumbers = (arr) => {
+    let result = 0;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    result = `the Sum of all Numbers is ${sum} :)`
+    return console.log(result);
+}
+
+sumOfNumbers([2, 4, 5, 20, 60]);
