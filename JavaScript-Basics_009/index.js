@@ -129,4 +129,4 @@ const largestNum = (...num) => {
     return console.log(result);
 } 
 
-largestNum(5,6,3,2,7,9)
+largestNum(5, 6, 3, 2, 7, 9);
