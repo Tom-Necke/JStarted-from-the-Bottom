@@ -5,11 +5,23 @@
 //copyArray([5, -20, "Salem", true]) => [5, -20, "Salem", true]
 //copyArray([]) => []
 
+const copyArray = (...arr) => {
+    let result = [];
+    result = arr;
+    return console.log(result);
+}
+
+copyArray([12, 66, 10]);
+copyArray([5, -20, "Salem", true]);
+copyArray([]);
+
 //02. 
 //Schreibe ein Programm, um ein String umzukehren. 
 //Beispiele:
 //reverseString("Hallo Welt") => tleW ollaH
 //reverseString("Bonjour le monde") => ednom el ruojnoB
+
+
 
 //03. 
 //Missing Number. Create a function that takes an array of all integers between 1 and 10 (excluding one) and returns the missing integer.
