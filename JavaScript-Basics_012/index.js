@@ -166,3 +166,78 @@ removeNumbers("12ma23tt");
 removeNumbers("e1d2a3b4i5t6");
 
 console.log("---------------------------------------");
+
+//11.
+//Check if One Array can be Nested in Another
+//Create a function that returns true if the first array can be nested inside the second.
+
+// arr1 can be nested inside arr2 if:
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+
+// Examples
+// canNest([1, 2, 3, 4], [0, 6]) ➞ true
+// canNest([3, 1], [4, 0]) ➞ true
+// canNest([9, 9, 8], [8, 9]) ➞ false
+// canNest([1, 2, 3, 4], [2, 3]) ➞ false
+
+const canNest = (arr1, arr2) => {
+    let result;
+    if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
+        result = true;
+    } else {
+        result = false
+    }
+    return console.log(result);
+}
+ 
+canNest([1, 2, 3, 4], [0, 6]);
+canNest([3, 1], [4, 0]);
+canNest([9, 9, 8], [8, 9]);
+canNest([1, 2, 3, 4], [2, 3]);
+
+console.log("---------------------------------------");
+
+//12.
+//Tuck in Array
+//Create a function that takes two arrays and insert the second array in the middle of the first array.
+//Examples
+// tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]) ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// tuckIn([15,150], [45, 75, 35]) ➞ [15, 45, 75, 35, 150]
+// tuckIn([[1, 2], [5, 6]], [[3, 4]]) ➞ [[1, 2], [3, 4], [5, 6]]
+
+const tuckIn = (arr1, arr2) => {
+    let result = [];
+    result = [arr1[0], arr2, arr1[1]]
+    return console.log(result);
+}
+
+tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]);
+tuckIn([15,150], [45, 75, 35]);
+tuckIn([[1, 2], [5, 6]], [[3, 4]]);
+
+console.log("---------------------------------------");
+
+//13.
+//Number Split
+//Given a number, return an array containing the two halves of the number. If the number is odd, make the rightmost number higher.
+//Examples
+// numberSplit(4) ➞ [2, 2]
+// numberSplit(10) ➞ [5, 5]
+// numberSplit(11) ➞ [5, 6]
+// numberSplit(-9) ➞ [-5, -4]
+
+const numberSplit = (num) => {
+    let result = [];
+    let numOne = Math.floor(num / 2);
+    let numTwo = num - numOne;
+    result.push(numOne, numTwo)
+    return console.log(result);
+}
+
+numberSplit(4)
+numberSplit(10)
+numberSplit(11)
+numberSplit(-9)
+
+console.log("---------------------------------------");
