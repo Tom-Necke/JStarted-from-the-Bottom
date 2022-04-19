@@ -64,14 +64,20 @@ console.log("---------------------------------------");
 // unique([0, 1, 1, 1, 1, 1, 1, 1]) ➞ 0
 
 const unique = (arr) => {
-
+    let result = [];
+    for (i = 0; i < arr.length; i++){
+        if (result.indexOf(arr[i]) == -1){
+            result.push(arr[i]);
+        } 
+    }
+    return console.log(result);
 }
 
 unique([3, 3, 3, 7, 3, 3]);
 unique([0, 0, 0.77, 0, 0]);
 unique([0, 1, 1, 1, 1, 1, 1, 1]);
 
-console.log("---------------------------------------");
+console.log("--------------Hallo-------------------------");
 
 //08.
 // c4n y0u r34d th15? Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string. NB: for your program to work properly, the function should replace all 'a's with 4, 'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
