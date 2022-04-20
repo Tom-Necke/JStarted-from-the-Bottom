@@ -90,19 +90,19 @@ const scrabbleCounter = (arr) => {
 // {a: 1} ➞ false
 
 const empty = {};
-const value = {
+const notEmpty = {
     a: 1,
     b: 2,
     c: 3
 };
 
 function emptyObject(obj) {
-  let objToArray = Object.entries(obj);
-  if (objToArray.length <= 0) {
+  let newArr = Object.entries(obj);
+  if (newArr.length <= 0) {
     return true;
   } else {
     return false;
   }
 }
 
-console.log(emptyObject(value));
+console.log(emptyObject(empty));
