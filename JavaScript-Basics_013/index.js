@@ -52,8 +52,6 @@ const inRange = (num, obj) => {
     } else {
         result = false
     }
-
-
     return console.log(result);
 }
 
@@ -61,3 +59,50 @@ inRange(4, { min: 0, max: 5 });
 inRange(4, { min: 4, max: 5 });
 inRange(4, { min: 6, max: 10 });
 inRange(5, { min: 5, max: 5 });
+
+// Scrabble. Write a program that, given an array of scrabble tiles, counts the maximum score that a player can earn from the tiles in their hand.
+// Example:
+// [ { tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ]
+
+const scrabble = [
+    { tile: "N", score: 1 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 10 },
+    { tile: "X", score: 8 },
+    { tile: "D", score: 2 },
+    { tile: "A", score: 1 },
+    { tile: "E", score: 1 },
+];
+  
+const scrabbleCounter = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i].score;
+    }
+    return sum;
+  };
+  
+  console.log(scrabbleCounter(scrabble));
+
+// Is it an empty object? Write a program that returns true if an object is empty, and false if otherwise.
+// Examples:
+// {} ➞ true
+// {a: 1} ➞ false
+
+const empty = {};
+const value = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+function emptyObject(obj) {
+  let objToArray = Object.entries(obj);
+  if (objToArray.length <= 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(emptyObject(value));
