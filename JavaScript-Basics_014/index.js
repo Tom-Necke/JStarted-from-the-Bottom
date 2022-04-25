@@ -12,3 +12,4 @@ const countLetters = (str) => {
   
 countLetters("tree");
 countLetters("Hallo");
+
