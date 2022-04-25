@@ -157,3 +157,51 @@ const studentDisplay = (bla) => {
 
 studentDisplay(student)
 
+
+
+
+
+// const storeItems = {
+// 	"Wool": 13.99,
+// 	"Knitting Needles": 15.50,
+// 	"Bag": 13.99,
+// }
+// const freeShipping = obj => {
+// 	const valuesArray = Object.values(obj);
+// 	let sum = valuesArray.reduce((acc, curr) => acc + curr, 0);
+	
+// 	// OR a loop:
+// 	// let sum = 0;
+// 	// for (let i = 0; i < valuesArray.length; i++) {
+// 	// 	sum += valuesArray[i];
+// 	// }
+	
+// 	return sum > 50 ? "Free shipping" : "Shipping costs apply";
+// }
+
+// console.log(freeShipping(storeItems)); // "Shipping costs apply"
+
+
+
+
+const freeShipping2 = (obj) => {
+    const newArr = Object.values(obj);
+    let sum = newArr.reduce((acc, curr) => acc + curr);
+    return console.log(sum > 50 == true || false);
+}
+
+
+freeShipping2({ "Sponge": 3.50, "Soap": 5.99 })
+freeShipping2({ "Surround Sound Equipment": 499.99 })
+freeShipping2({ "Wool": 13.99, "Knitting Needles": 15.50, "Bag": 13.99 })
+
+
+// MakePairs - Write a method that returns a deep array like [[key, value]]
+// Task description: Write a method that returns a deep array like [[key, value]]
+// Expected Result: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+
+const makePairs = (obj) => {
+    console.log(Object.entries(obj));
+}
+
+makePairs({ a: 1, b: 2 })
