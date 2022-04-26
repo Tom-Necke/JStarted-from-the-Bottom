@@ -104,6 +104,17 @@ getNames([{ name: "Jane" },
        { name: "John" }
 ])
 
+const studentsArr = [
+  { name: "Ali" },
+  { name: "Nancy" },
+  { name: "Olga" }
+]
+const resultArr = [];
+for (const student of studentsArr) {
+  resultArr.push(student.name);
+}
+console.log(resultArr);
+
 // Create a function that returns an object has following output, try this one in Advance array methods :muskel::hautton-2:
 // Examples:
 // ABC -> { A: 1, B: 1, C: 1 } QQQ -> { Q: 3}
@@ -133,3 +144,6 @@ const scrabble = [
   
 const sumOfScore = (arr) => arr.reduce((acc, cur) => acc + cur.score, 0);
 console.log(sumOfScore(scrabble));
+
+
+
