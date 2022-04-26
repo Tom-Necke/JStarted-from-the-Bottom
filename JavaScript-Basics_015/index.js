@@ -144,6 +144,3 @@ const scrabble = [
   
 const sumOfScore = (arr) => arr.reduce((acc, cur) => acc + cur.score, 0);
 console.log(sumOfScore(scrabble));
-
-
-
