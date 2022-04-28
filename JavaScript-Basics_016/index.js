@@ -111,35 +111,39 @@ console.log(library.sort(librarySort));
 
 const zodiac = (date) => {
     let day = parseInt(date.slice(0, 2));
-    let month = parseInt(date.slice(3, 5))
-
-    if (month == 0 || day == 0) {
-        return "not a real date";
-    } else if (month >= 1 && month <= 2 && day >= 20 && day <= 19) {
-        return "Aquarius";
-    } else if (month >= 2 && month <= 3 && day >= 19 && day <= 20) {
-        return "Pisces"
-    } else if (month >= 3 && month <= 4 && day >= 21 && day <= 19) {
-        return "Aries"
-    } else if (month >= 4 && month <= 5 && day >= 20 && day <= 20) {
-        return "Taurus"
-    } 
-
-
+    let month = parseInt(date.slice(3, 5));
+    let result = "";
+    if (day == 0 || day > 31 || month == 0 || month > 12) {
+        result = "not a real date";
+    } else if (day >= 20 && month == 1 || day <= 18 && month == 2) {
+        result = "Aquarius";
+    } else if (day >= 19 && month == 2 || day <= 20 && month == 3) {
+        result = "Pisces";
+    } else if (day >= 21 && month == 3 || day <= 19 && month == 4) {
+        result = "Aries";
+    } else if (day >= 20 && month == 4 || day <= 20 && month == 5) {
+        result = "Taurus";
+    } else if (day >= 21 && month == 5 || day <= 20 && month == 6) {
+        result = "Gemini";
+    } else if (day >= 21 && month == 6 || day <= 22 && month == 7) {
+        result = "Cancer";
+    } else if (day >= 23 && month == 7 || day <= 22 && month == 8) {
+        result = "Leo";
+    } else if (day >= 23 && month == 8 || day <= 22 && month == 9) {
+        result = "Virgo";
+    } else if (day >= 23 && month == 9 || day <= 22 && month == 10) {
+        result = "Libra";
+    } else if (day >= 23 && month == 10 || day <= 21 && month == 11) {
+        result = "Scorpio";
+    } else if (day >= 22 && month == 11 || day <= 21 && month == 12) {
+        result = "Sagittaurius";
+    } else if (day >= 22 && month == 12 || day <= 19 && month == 1) {
+        result = "Taurus";
+    }
+    return console.log(result);
 }
-
-        01234
-console.log(zodiac("14-02-2002"));
+       
+zodiac("24-01-2002");
 zodiac("10-06-1984");
-
-
-
-
-
-
-
-const numbersYo = [4, 3, 7, 32, 12, 5, 8, 4141, 12, 57, 2];
-
-const sortNumbersYo = numbersYo.sort((a, b) => a < b ? 1 : -1)
-
-console.log(sortNumbersYo);
+zodiac("24.10.1994");
+zodiac("12.03.1991");
