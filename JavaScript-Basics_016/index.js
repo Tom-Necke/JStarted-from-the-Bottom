@@ -78,9 +78,9 @@ function librarySort(acc, cur) {
 console.log(library.sort(librarySort));
 
 
-  //   Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
+  // Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
   // console.log(num_string_range("a", "z", 2));
-  // // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+  // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 
 
   
@@ -107,6 +107,36 @@ console.log(library.sort(librarySort));
     { signName: "Capricorn", from: "1222" },
     { signName: "Not real day!", from: "1232" },
   ];
+
+
+const zodiac = (date) => {
+    let day = parseInt(date.slice(0, 2));
+    let month = parseInt(date.slice(3, 5))
+
+    if (month == 0 || day == 0) {
+        return "not a real date";
+    } else if (month >= 1 && month <= 2 && day >= 20 && day <= 19) {
+        return "Aquarius";
+    } else if (month >= 2 && month <= 3 && day >= 19 && day <= 20) {
+        return "Pisces"
+    } else if (month >= 3 && month <= 4 && day >= 21 && day <= 19) {
+        return "Aries"
+    } else if (month >= 4 && month <= 5 && day >= 20 && day <= 20) {
+        return "Taurus"
+    } 
+
+
+}
+
+        01234
+console.log(zodiac("14-02-2002"));
+zodiac("10-06-1984");
+
+
+
+
+
+
 
 const numbersYo = [4, 3, 7, 32, 12, 5, 8, 4141, 12, 57, 2];
 
