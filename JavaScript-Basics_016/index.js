@@ -4,17 +4,19 @@
 // console.log(humanize(302)); //"302nd"
 
 function humanize(num) {
-    if(num % 100 >= 11 && num % 100 <= 13)
+    if (num % 100 >= 11 && num % 100 <= 13) {
         return num + "th";
-    
-    switch(num % 10) {
-        case 1: return num + "st";
-        case 2: return num + "nd";
-        case 3: return num + "rd";
+    } else if (num % 10 == 1) {
+        return num + "st";
+    } else if (num % 10 == 2) {
+        return num + "nd";
+    } else if (num % 10 == 3) {
+        return num + "rd";
+    } else {
+        return num + "th";
     }
-    
-    return num + "th";
 }
+
 console.log(humanize(1));
 console.log(humanize(20));
 console.log(humanize(302));
@@ -22,7 +24,7 @@ console.log(humanize(302));
 // Write a JavaScript function to alphabetize a given string.
 // Note : Alphabetize string : An individual string can be alphabetized. This rearranges the letters so they are sorted A to Z.
 // console.log(alphabetize_string("United States"));
-// //"SUadeeinsttt"
+//"SUadeeinsttt"
 
 const alphabetize_string = (str) => {
     let newArr = str.split("").sort().join("")
@@ -105,3 +107,9 @@ console.log(library.sort(librarySort));
     { signName: "Capricorn", from: "1222" },
     { signName: "Not real day!", from: "1232" },
   ];
+
+const numbersYo = [4, 3, 7, 32, 12, 5, 8, 4141, 12, 57, 2];
+
+const sortNumbersYo = numbersYo.sort((a, b) => a < b ? 1 : -1)
+
+console.log(sortNumbersYo);
